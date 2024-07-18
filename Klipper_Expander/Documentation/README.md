@@ -49,7 +49,7 @@ There is one switch, labeled RST. This resets the board
 
 ## I2C Header (PF0, PF1)
 
-Contains a 3.3V I2C bus for connecting displays, and other sensors such as environemntal sensors and breakout expanders.
+Contains a 3.3V I2C bus for connecting displays, and other sensors such as enviromental sensors and breakout expanders.
 This plugs into J2
 
 <img src="../Images/I2C.png" width="300">
@@ -102,7 +102,7 @@ _You may need to change `expander:` to match your expander mcu name_
 
 ## Thermistors (PA5, PA6)
 
-2 thermsitor inputs that use a 4.7K pullup resistor (Klipper default)
+2 thermistor inputs that use a 4.7K pullup resistor (Klipper default)
 Connected to pins PA5 and PA6
 
 <img src="../Images/Thermistors.png" width="300">
@@ -126,7 +126,7 @@ _You may need to change `expander:` to match your expander mcu name_
 
 ## Neopixel header (PB1)
 
-Header for using neopixels. there is a single power input pin (NPV) that you can supply with the voltage your struip needs (5V/12V) and it passes it to the three pin header (Vin,Data,Ground)
+Header for using neopixels. There is a single power input pin (NPV) that you can supply with the voltage your strip needs (5V/12V) and it passes it to the three pin header (Vin, Data, Ground)
 Connected to J1, which has a NPV supplied voltage, GND and PB1
 
 <img src="../Images/Neopixel.png" width="150"> <img src="../Images/KlipperExpander_NeopixelWiring.png" width="800">
@@ -150,7 +150,7 @@ Here are some more advanced features and details about the board
 
 ## Boot Jumper
 
-This jumper needs to be installed to put the board in DFU mode to flash with klipper firmware. The board will show up as "Device in DFU Mode" to `lsusb` and then should show up in `dfu-util --list`
+This jumper needs to be installed to put the board in DFU mode to flash with Klipper firmware. The board will show up as "Device in DFU Mode" to `lsusb` and then should show up in `dfu-util --list`
 
 <img src="../Images/Boot.png" width="300">
 
@@ -196,8 +196,8 @@ Use the [Example](../Software/standalone.cfg) confiugration supplied in this rep
 When the Expander starts up you should see:
 - All 3 Status LEDs light up
 - None of the MOSFETs light up
-- Neopixel will be orange
-- Display will have 3d printer typical display
+- Neopixel should be orange
+- Display should show a typical 3D printer display
 
 Other steps:
 - Run a M105 to get temperature readings
@@ -217,7 +217,7 @@ Sometimes problems happen, here is how you can fix them
 
 ## Why do I want this?
 
-The Expander gives you extra connectivity that suppliments your main MCU(s) without the cost and size of a full board. Also you can use an Expander to run devices at a different voltage than the main MCU. i.e. Noctua fans are 12V where the main MCU is 24V
+The Expander gives you extra connectivity that suppliments your main MCU(s) without the cost and size of a full board. You can also use an Expander to run devices at a different voltage than the main MCU: i.e. Noctua fans are 12V where the main MCU is 24V.
 
 ## How do I get one?
 
